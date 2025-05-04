@@ -1,0 +1,66 @@
+/* Custom styling for the real estate price predictor app */
+
+/* Card hover effect */
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Make prediction result stand out */
+#prediction-result {
+    font-size: 2.5rem;
+    color: var(--bs-success);
+    text-shadow: 0 0 10px rgba(40, 167, 69, 0.2);
+}
+
+/* Custom styling for form elements */
+.form-control:focus, .form-select:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Add some spacing to the form elements */
+.form-label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+/* Style for the prediction button */
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .card-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    #prediction-result {
+        font-size: 2rem;
+    }
+}
+
+/* Animate the results container */
+#results-container:not(.d-none) {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
